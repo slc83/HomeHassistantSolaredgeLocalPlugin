@@ -1,0 +1,100 @@
+{
+  "title": "SolarEdge Local",
+  "config": {
+    "step": {
+      "user": {
+        "title": "SolarEdge Local",
+        "description": "Enable Modbus TCP on the inverter first. Enter a hostname or IP address without http://. Default port: 1502; device ID: 1.",
+        "data": {
+          "host": "IP address or hostname",
+          "port": "Modbus TCP port",
+          "unit_id": "Modbus device ID",
+          "scan_interval": "Update interval (seconds)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot read the inverter. Check IP, port, device ID and that Modbus TCP is enabled. Stop other Modbus clients.",
+      "unsupported_device": "This device does not expose the supported SolarEdge SunSpec models (101–103).",
+      "wrong_device": "The serial number differs from the configured inverter."
+    },
+    "abort": {
+      "already_configured": "This inverter is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Connection settings",
+        "description": "Enable Modbus TCP on the inverter first. Enter a hostname or IP address without http://. Default port: 1502; device ID: 1.",
+        "data": {
+          "host": "IP address or hostname",
+          "port": "Modbus TCP port",
+          "unit_id": "Modbus device ID",
+          "scan_interval": "Update interval (seconds)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot read the inverter. Check IP, port, device ID and that Modbus TCP is enabled. Stop other Modbus clients.",
+      "unsupported_device": "This device does not expose the supported SolarEdge SunSpec models (101–103).",
+      "wrong_device": "The serial number differs from the configured inverter."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "ac_power": {
+        "name": "AC power"
+      },
+      "energy_total": {
+        "name": "Total production"
+      },
+      "ac_voltage": {
+        "name": "AC voltage"
+      },
+      "ac_current": {
+        "name": "AC current"
+      },
+      "frequency": {
+        "name": "Grid frequency"
+      },
+      "dc_power": {
+        "name": "DC power"
+      },
+      "dc_voltage": {
+        "name": "DC voltage"
+      },
+      "dc_current": {
+        "name": "DC current"
+      },
+      "temperature": {
+        "name": "Heat sink temperature"
+      },
+      "apparent_power": {
+        "name": "Apparent power"
+      },
+      "reactive_power": {
+        "name": "Reactive power"
+      },
+      "power_factor": {
+        "name": "Power factor"
+      },
+      "status": {
+        "name": "Status",
+        "state": {
+          "off": "Off",
+          "sleeping": "Sleeping",
+          "starting": "Starting",
+          "producing": "Producing",
+          "throttled": "Throttled",
+          "shutting_down": "Shutting down",
+          "fault": "Fault",
+          "standby": "Standby"
+        }
+      },
+      "vendor_status": {
+        "name": "Vendor status code"
+      }
+    }
+  }
+}
